@@ -21,7 +21,7 @@
     --red: #dc2626;
     --red-light: #fef2f2;
   }
-  body { font-family: 'Segoe UI', sans-serif; color: var(--text); background: var(--bg2); font-size: 16.5px; line-height: 1.6; }
+  body { font-family: 'Segoe UI', sans-serif; color: var(--text); background: var(--bg2); font-size: 15px; line-height: 1.6; }
 
   /* NAV */
   nav { background: var(--bg); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
@@ -43,12 +43,12 @@
   .btn-outline { background: var(--bg); color: var(--primary); border: 1px solid var(--primary); }
 
   /* SECTION */
-  section { max-width: 1500px; margin: 0 auto; padding: 2.5rem 2rem; }
+  section { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; }
   .section-title { font-size: 18px; font-weight: 700; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px; }
   .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
   /* CARD GRID - 2열 */
-  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; align-items: start; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   @media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } }
 
   /* PROJECT CARD */
@@ -64,7 +64,7 @@
   .dot-primary { background: var(--primary); }
   .project-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: .75rem; }
   .tool-tag { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 3px 10px; font-size: 12px; color: var(--muted); }
-  .project-link { font-size: 13px; color: #fff; text-decoration: none; font-weight: 500; margin-top: auto; background: var(--primary); padding: 8px 16px; border-radius: 8px; display: inline-block; align-self: flex-start; }
+  .project-link { font-size: 13px; color: var(--primary); text-decoration: none; font-weight: 500; margin-top: auto; }
   .card-img-single { width: 100%; height: 140px; object-fit: cover; object-position: top; border-radius: 8px; margin-bottom: 12px; }
   .card-img-row { display: flex; gap: 8px; margin-bottom: 12px; }
   .card-img-row img { width: 50%; height: 140px; object-fit: cover; object-position: top; border-radius: 8px; }
@@ -74,6 +74,13 @@
   .skill-group h4 { font-size: 13px; color: var(--muted); margin-bottom: .5rem; font-weight: 500; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
   .skill-tag { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; font-size: 13px; }
+
+  /* PRACTICE CARD */
+  .practice-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .practice-img { width: 100%; height: 180px; object-fit: cover; object-position: top; }
+  .practice-title { font-weight: 700; font-size: 14px; padding: 1rem 1.25rem 0.25rem; }
+  .practice-desc { font-size: 13px; color: var(--muted); padding: 0 1.25rem 0.75rem; }
+  .practice-card .project-tools { padding: 0 1.25rem 1rem; margin: 0; }
 
   /* FOOTER */
   footer { text-align: center; padding: 2rem; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); background: var(--bg); }
@@ -86,7 +93,7 @@
   <div class="nav-links">
     <a href="#testing">테스팅 기초 지식</a>
     <a href="#auto">자동화 툴</a>
-    <a href="#skills">스킬</a>
+    <a href="#skills">실습 작업물</a>
   </div>
 </nav>
 
@@ -96,7 +103,7 @@
   <div class="card-grid">
 
     <div class="project-card">
-      <img class="card-img-single" src="https://raw.githubusercontent.com/jhyosun/meal_ticket_test/main/images/image.png">
+      <img class="card-img-single" src="https://raw.githubusercontent.com/jhyosun/meal_ticket_test/main/image.png">
       <div class="project-header">
         <div class="project-title">식권 자판기 시뮬레이터 테스트</div>
       </div>
@@ -112,12 +119,10 @@
         <span class="tool-tag">결함리포트</span>
       </div>
       <a href="https://github.com/jhyosun/meal_ticket_test" class="project-link">→ GitHub에서 보기</a>
-     <img src="https://raw.githubusercontent.com/jhyosun/meal_ticket_test/main/images/image 5.jpg" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:12px;">
-     
     </div>
 
     <div class="project-card">
-      <img class="card-img-single" src="https://raw.githubusercontent.com/jhyosun/book_search/main/images/image.png">
+      <img class="card-img-single" src="https://raw.githubusercontent.com/jhyosun/book_search/main/image.png">
       <div class="project-header">
         <div class="project-title">카카오 책 검색 웹페이지 테스트</div>
       </div>
@@ -132,8 +137,6 @@
         <span class="tool-tag">결함리포트</span>
       </div>
       <a href="https://github.com/jhyosun/book_search" class="project-link">→ GitHub에서 보기</a>
-     <img src="https://raw.githubusercontent.com/jhyosun/book_search/main/images/image 3.JPG" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:12px;">
-     
     </div>
 
   </div>
@@ -146,8 +149,8 @@
 
     <div class="project-card">
       <div class="card-img-row">
-        <img src="https://raw.githubusercontent.com/jhyosun/melon_lyrics_selenium/main/images/image.png">
-        <img src="https://raw.githubusercontent.com/jhyosun/melon_lyrics_selenium/main/images/image 1.png">
+        <img src="https://raw.githubusercontent.com/jhyosun/melon_lyrics_selenium/main/image.png">
+        <img src="https://raw.githubusercontent.com/jhyosun/melon_lyrics_selenium/main/image 1.png">
       </div>
       <div class="project-header">
         <div class="project-title">Selenium 활용 멜론에서 가사 가져오기</div>
@@ -162,8 +165,8 @@
 
     <div class="project-card">
       <div class="card-img-row">
-        <img src="https://raw.githubusercontent.com/jhyosun/login_test_selenium/main/images/login.JPG">
-        <img src="https://raw.githubusercontent.com/jhyosun/login_test_selenium/main/images/image 6.png">
+        <img src="https://raw.githubusercontent.com/jhyosun/login_test_selenium/main/login.JPG">
+        <img src="https://raw.githubusercontent.com/jhyosun/login_test_selenium/main/image 6.png">
       </div>
       <div class="project-header">
         <div class="project-title">Selenium 활용 로그인 테스트</div>
@@ -177,54 +180,65 @@
     </div>
 
     <div class="project-card">
-     <img class="card-img-single" src="https://raw.githubusercontent.com/jhyosun/signup_playwright/main/images/image1.JPG">
       <div class="project-header">
-        <div class="project-title">Playwright 활용 회원가입 테스트</div>
+        <div class="project-title">Playwright를 활용한 회원가입 테스트</div>
       </div>
-      <div class="project-desc">Page Object Model과 데이터 기반 테스트를 적용해 회원가입 자동화 테스트의 재사용성과 유지보수성을 개선했다.</div>
+      <div class="project-desc">Page Object Model 구조를 사용한 회원가입 자동화 테스트.</div>
       <div class="project-tools">
         <span class="tool-tag">Python</span>
         <span class="tool-tag">Playwright</span>
       </div>
-      <a href="https://github.com/jhyosun/signup_playwright" class="project-link">→ GitHub에서 보기</a>
-    </div>
-
-   <div class="project-card">
-        <img class="card-img-single" src="https://raw.githubusercontent.com/jhyosun/shopping_cart_playwright/main/images/image.JPG">
-      <div class="project-header">
-        <div class="project-title">Playwright 활용 이커머스 웹 서비스 자동화 테스트</div>
-      </div>
-      <div class="project-desc">'SauceDemo' 데모 쇼핑몰을 대상으로 사용자 핵심 기능인 로그인, 상품 장바구니, 체크아웃 흐름에 대한 자동화 테스트를 수행했다.</div>
-      <div class="project-tools">
-        <span class="tool-tag">Python</span>
-        <span class="tool-tag">Playwright</span>
-      </div>
-      <a href="https://github.com/jhyosun/shopping_cart_playwright" class="project-link">→ GitHub에서 보기</a>
+      <a href="#" class="project-link">→ GitHub에서 보기</a>
     </div>
 
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- PRACTICE -->
 <section id="skills">
-  <div class="section-title">스킬</div>
-  <div class="skill-group">
-    <h4>테스트 방법론</h4>
-    <div class="skill-tags">
-      <span class="skill-tag">테스트케이스 설계</span>
-      <span class="skill-tag">경계값 분석</span>
-      <span class="skill-tag">동등 분할</span>
-      <span class="skill-tag">탐색적 테스트</span>
-      <span class="skill-tag">회귀 테스트</span>
+  <div class="section-title">실습 작업물</div>
+  <div class="card-grid">
+
+    <div class="practice-card">
+      <img class="practice-img" src="https://via.placeholder.com/600x340?text=스크린샷">
+      <div class="practice-title">실습 제목</div>
+      <div class="practice-desc">한 줄 설명을 여기에 적어주세요.</div>
+      <div class="project-tools">
+        <span class="tool-tag">기술1</span>
+        <span class="tool-tag">기술2</span>
+      </div>
     </div>
-  </div>
-  <div class="skill-group">
-    <h4>자동화 도구</h4>
-    <div class="skill-tags">
-      <span class="skill-tag">Selenium</span>
-      <span class="skill-tag">Playwright</span>
-      <span class="skill-tag">Python</span>
+
+    <div class="practice-card">
+      <img class="practice-img" src="https://via.placeholder.com/600x340?text=스크린샷">
+      <div class="practice-title">실습 제목</div>
+      <div class="practice-desc">한 줄 설명을 여기에 적어주세요.</div>
+      <div class="project-tools">
+        <span class="tool-tag">기술1</span>
+        <span class="tool-tag">기술2</span>
+      </div>
     </div>
+
+    <div class="practice-card">
+      <img class="practice-img" src="https://via.placeholder.com/600x340?text=스크린샷">
+      <div class="practice-title">실습 제목</div>
+      <div class="practice-desc">한 줄 설명을 여기에 적어주세요.</div>
+      <div class="project-tools">
+        <span class="tool-tag">기술1</span>
+        <span class="tool-tag">기술2</span>
+      </div>
+    </div>
+
+    <div class="practice-card">
+      <img class="practice-img" src="https://via.placeholder.com/600x340?text=스크린샷">
+      <div class="practice-title">실습 제목</div>
+      <div class="practice-desc">한 줄 설명을 여기에 적어주세요.</div>
+      <div class="project-tools">
+        <span class="tool-tag">기술1</span>
+        <span class="tool-tag">기술2</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
