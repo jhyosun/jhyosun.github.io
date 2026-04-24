@@ -47,10 +47,13 @@
   .section-title { font-size: 18px; font-weight: 700; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px; }
   .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  /* CARD GRID - 2열 */
+    /* CARD GRID - 2열 */
   .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; align-items: start; }
   @media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } }
 
+  /* 전체 너비 카드 - 2열 전체 폭 */
+  .card-full { grid-column: 1 / -1; }
+ 
   /* PROJECT CARD */
   .project-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; display: flex; flex-direction: column; }
   .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .75rem; flex-wrap: wrap; gap: 8px; }
